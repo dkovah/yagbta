@@ -56,8 +56,9 @@ func tick():
 	child_node.tick()
 
 
-func get_blackboard(id):
+func get_blackboard(id) -> Blackboard:
 	for b in blackboards:
 		if b.id == id:
 			return b
+	return blackboards[0]
 
