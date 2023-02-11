@@ -6,13 +6,15 @@ export(bool) var active = true
 export(float, 0.01, 5, 0.01) var tick_time = 0.5
 export(bool) var use_physics_process = false
 
-export(Resource) var blackboard
+export(Array, Resource) var blackboards
 var child_node
 
 func _ready():
 	
-	if blackboard == null:
-		blackboard = Blackboard.new()
+	if blackboards.empty():
+		var default_blackboard := Blackboard.new()
+		default_blackboard.id = "default"
+		blackboards.append(default_blackboard)
 	
 	child_node = get_children()[0]
 	
@@ -54,6 +56,8 @@ func tick():
 	child_node.tick()
 
 
-func get_blackboard():
-	return blackboard
+func get_blackboard(id):
+	for b in blackboards:
+		if b.id == id:
+			return b
 
