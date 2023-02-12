@@ -11,7 +11,13 @@ var child_node
 
 func _ready():
 	
-	if blackboards.empty():
+	var no_default_blackboard = blackboards.empty()
+	
+	for blackboard in blackboards:
+		if blackboard.id == "default":
+			no_default_blackboard = false
+	
+	if no_default_blackboard:
 		var default_blackboard := Blackboard.new()
 		default_blackboard.id = "default"
 		blackboards.append(default_blackboard)

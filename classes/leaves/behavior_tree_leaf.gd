@@ -7,5 +7,5 @@ func get_root() -> BehaviorTreeRoot:
 func get_actor() -> Node:
 	return actor
 
-func get_blackboard(id) -> Blackboard:
+func get_blackboard(id = "default") -> Blackboard:
 	return get_root().get_blackboard(id)
