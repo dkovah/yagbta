@@ -33,7 +33,7 @@ func _ready():
 		timer.connect("timeout", self, "_on_tick_timer_timeout")
 		timer.start()
 	
-	if actor_path == "":
+	if actor_path.is_empty():
 		actor = get_parent()
 	else:
 		actor = get_node(actor_path)
