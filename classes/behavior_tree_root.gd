@@ -1,17 +1,18 @@
+@icon( "res://addons/yagbta/icons/BehaviorTreeRoot.svg")
 extends BehaviorTreeBranchedNode
-class_name BehaviorTreeRoot, "res://addons/yagbta/icons/BehaviorTreeRoot.svg"
+class_name BehaviorTreeRoot
 
-export(NodePath) var actor_path
-export(bool) var active = true
-export(float, 0.01, 5, 0.01) var tick_time = 0.5
-export(bool) var use_physics_process = false
+@export var actor_path: NodePath
+@export var active: bool = true
+@export_range(0.01, 5, 0.01) var tick_time = 0.5 # (float, 0.01, 5, 0.01)
+@export var use_physics_process: bool = false
 
-export(Array, Resource) var blackboards
+@export var blackboards : Array[Blackboard]
 var child_node
 
 func _ready():
 	
-	var no_default_blackboard = blackboards.empty()
+	var no_default_blackboard = blackboards.is_empty()
 	
 	for blackboard in blackboards:
 		if blackboard.id == "default":
@@ -30,10 +31,10 @@ func _ready():
 		timer.name = "tick_timer"
 		timer.wait_time = tick_time
 		add_child(timer)
-		timer.connect("timeout", self, "_on_tick_timer_timeout")
+		timer.connect("timeout",Callable(self,"_on_tick_timer_timeout"))
 		timer.start()
 	
-	if actor_path == "":
+	if actor_path.is_empty():
 		actor = get_parent()
 	else:
 		actor = get_node(actor_path)

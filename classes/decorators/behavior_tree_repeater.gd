@@ -1,7 +1,8 @@
+@icon("res://addons/yagbta/icons/BehaviorTreeRepeater.svg")
 extends BehaviorTreeDecorator
-class_name BehaviorTreeRepeater, "res://addons/yagbta/icons/BehaviorTreeRepeater.svg"
+class_name BehaviorTreeRepeater
 
-export(int) var times = 1
+@export var times: int = 1
 var max_times
 
 func _ready():

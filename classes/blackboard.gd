@@ -1,8 +1,9 @@
+@icon("res://addons/yagbta/icons/Blackboard.svg")
 extends Resource
-class_name Blackboard, "res://addons/yagbta/icons/Blackboard.svg"
+class_name Blackboard
 
-export var id : String
-export var data = {}
+@export var id : String
+@export var data = {}
 
 func set_data(key, value):
 	data[key] = value

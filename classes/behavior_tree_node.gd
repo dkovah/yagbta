@@ -1,5 +1,6 @@
+@icon("res://addons/yagbta/icons/BehaviorTreeNode.svg")
 extends Node
-class_name BehaviorTreeNode, "res://addons/yagbta/icons/BehaviorTreeNode.svg"
+class_name BehaviorTreeNode
 
 var tree_root = null
 var actor = null

@@ -1,5 +1,6 @@
+@icon("res://addons/yagbta/icons/BehaviorTreeInverter.svg")
 extends BehaviorTreeDecorator
-class_name BehaviorTreeInverter, "res://addons/yagbta/icons/BehaviorTreeInverter.svg"
+class_name BehaviorTreeInverter
 
 func tick():
 	var response = child_node.tick()

@@ -1,5 +1,6 @@
+@icon( "res://addons/yagbta/icons/BehaviorTreeDecorator.svg")
 extends BehaviorTreeBranchedNode
-class_name BehaviorTreeDecorator, "res://addons/yagbta/icons/BehaviorTreeDecorator.svg"
+class_name BehaviorTreeDecorator
 
 var child_node
 

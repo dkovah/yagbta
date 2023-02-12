@@ -1,5 +1,6 @@
+@icon("res://addons/yagbta/icons/BehaviorTreeLeaf.svg")
 extends BehaviorTreeNode
-class_name BehaviorTreeLeaf, "res://addons/yagbta/icons/BehaviorTreeLeaf.svg"
+class_name BehaviorTreeLeaf
 
 func get_root() -> BehaviorTreeRoot:
 	return tree_root

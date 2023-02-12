@@ -1,5 +1,6 @@
+@icon("res://addons/yagbta/icons/BehaviorTreeUntilFails.svg")
 extends BehaviorTreeDecorator
-class_name BehaviorTreeUntilFails, "res://addons/yagbta/icons/BehaviorTreeUntilFails.svg"
+class_name BehaviorTreeUntilFails
 	
 	
 func tick():

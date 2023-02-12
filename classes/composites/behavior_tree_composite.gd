@@ -1,12 +1,13 @@
+@icon("res://addons/yagbta/icons/BehaviorTreeComposite.svg")
 extends BehaviorTreeBranchedNode
-class_name BehaviorTreeComposite, "res://addons/yagbta/icons/BehaviorTreeComposite.svg"
+class_name BehaviorTreeComposite
 
 var stack = []
 var cursor = 0
-export(bool) var reactive = false
+@export var reactive: bool = false
 var current_child_running = null
 
-export var random = false
+@export var random = false
 
 var stop_condition
 var continue_condition
