@@ -8,7 +8,13 @@ class_name Blackboard
 func set_data(key, value):
 	data[key] = value
 
+
 func get_data(key):
 	if not data.has(key):
 		return null
 	return data[key]
+
+
+func check_data(key, value):
+	return data[key] == value
+
