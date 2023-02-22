@@ -4,8 +4,8 @@ class_name BehaviorTreeRoot
 
 @export var actor_path: NodePath
 @export var active: bool = true
+@export var use_physics_process: bool = true
 @export_range(0.01, 5, 0.01) var tick_time = 0.5 # (float, 0.01, 5, 0.01)
-@export var use_physics_process: bool = false
 
 @export var blackboards : Array[Blackboard]
 var child_node
