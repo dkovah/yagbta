@@ -2,8 +2,8 @@
 extends BehaviorTreeDecorator
 class_name BehaviorTreeInverter
 
-func tick():
-	var response = child_node.tick()
+func tick(delta):
+	var response = child_node.tick(delta)
 	if response == SUCCESS:
 		return FAILURE
 	elif response == FAILURE:

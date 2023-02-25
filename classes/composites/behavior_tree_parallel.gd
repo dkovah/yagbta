@@ -2,9 +2,9 @@
 extends BehaviorTreeComposite
 class_name BehaviorTreeParallel
 
-func tick():
+func tick(delta):
 	for node in stack:
-		node.tick()
+		node.tick(delta)
 	
 	if random:
 		stack.shuffle()

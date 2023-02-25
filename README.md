@@ -13,7 +13,7 @@ Yet Another Godot Behavior Tree Addon. Yes, *another* behavior tree addon. In my
 
 Also, as said, the plugin is mostly agnostic, so main (3.x) branch should work with any Godot 3.x version, and same for 4.x brach.
 
-To make a new action/condition, just create a new scene with a base Node as a root and add it a script that inherits from BehaviorTreeAction/BehaviorTreeCondition. Ovewrite `tick()` function with your action/condition logic, call `get_actor()`  to access the tree actor or `get_root()` for the tree root in case you need it, return `SUCCESS`, `FAILURE` or 	`RUNNING` and you are done. 
+To make a new action/condition, just create a new scene with a base Node as a root and add it a script that inherits from BehaviorTreeAction/BehaviorTreeCondition. Ovewrite `tick(delta)` function with your action/condition logic, call `get_actor()`  to access the tree actor or `get_root()` for the tree root in case you need it, return `SUCCESS`, `FAILURE` or 	`RUNNING` and you are done. 
 
 To get a blackboard from the tree root, call `get_blackboard(blackboard_id)` from anywhere in the action/condition script, and use `set_data(key, value)` and `get_data(key)` to modify it. 
 

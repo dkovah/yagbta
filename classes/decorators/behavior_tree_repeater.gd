@@ -8,8 +8,8 @@ var max_times
 func _ready():
 	max_times = times
 
-func tick():
-	var current_status = child_node.tick()
+func tick(delta):
+	var current_status = child_node.tick(delta)
 	if current_status == RUNNING:
 		return RUNNING
 	

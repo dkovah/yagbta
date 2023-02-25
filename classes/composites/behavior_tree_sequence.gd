@@ -3,7 +3,7 @@ extends BehaviorTreeComposite
 class_name BehaviorTreeSequence
 
 
-func tick():
+func tick(delta):
 	stop_condition = FAILURE
 	continue_condition = SUCCESS
-	return super.tick()
+	return super.tick(delta)

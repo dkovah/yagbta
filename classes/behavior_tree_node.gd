@@ -7,5 +7,5 @@ var actor = null
 enum {FAILURE, SUCCESS, RUNNING}
 var status = SUCCESS
 
-func tick():
+func tick(delta):
 	pass

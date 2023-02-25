@@ -2,8 +2,8 @@
 extends BehaviorTreeDecorator
 class_name BehaviorTreeFailer
 
-func tick():
-	var response = child_node.tick()
+func tick(delta):
+	var response = child_node.tick(delta)
 	if response == RUNNING:
 		return RUNNING
 	return FAILURE

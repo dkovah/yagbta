@@ -17,9 +17,9 @@ func _ready():
 	if random:
 		stack.shuffle()
 
-func tick():
+func tick(delta):
 	for i in range(len(stack) - cursor):
-		var node_status = stack[i + cursor].tick()
+		var node_status = stack[i + cursor].tick(delta)
 		if node_status == stop_condition:
 			cursor = 0
 			if random:

@@ -43,24 +43,24 @@ func _ready():
 	
 	setup_children(self, actor)
 	if active:
-		tick()
+		tick(1)
 
 
 func _physics_process(delta):
-	tick()
+	tick(delta)
 
 
 func activate():
 	active = true
-	tick()
+	tick(1)
 
 
 func _on_tick_timer_timeout():
-	tick()
+	tick(1)
 
 
-func tick():
-	child_node.tick()
+func tick(delta):
+	child_node.tick(delta)
 
 
 func get_blackboard(id) -> Blackboard:
